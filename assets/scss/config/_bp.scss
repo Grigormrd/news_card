@@ -1,0 +1,63 @@
+@function em($pixels, $context: 16) {
+  @return #{$pixels/$context}em;
+}
+
+$use-mediaqueries: true !default;
+
+$min-width: (
+	smaller:	    em(375),
+    small-between:	em(428),
+    small:		    em(576),
+    medium:		    em(768),
+    large:		    em(992),
+    larger:		    em(1200),
+    burger:		    em(1250),
+    huge:		    em(1500),
+    huger:		    em(1600),
+    hugest:		    em(1936)
+);
+
+$max-width: (
+	smaller:	    em(374),
+    small-between:	em(427),
+	small:		    em(575),
+	medium:		    em(767),
+	large:		    em(991),
+	larger:		    em(1199),
+	burger:		    em(1300),
+	huge:		    em(1499),
+	huger:		    em(1599),
+	hugest:		    em(1935)
+);
+
+@mixin bp($min, $max: null) {
+	$min-value: map-get($min-width, $min);
+	$max-value: map-get($max-width, $max);
+
+	@if $min-value {
+		@if $max-value {
+			@if $use-mediaqueries {
+				@media only screen and (min-width: $min-value) and (max-width: $max-value) { @content; }
+			}
+			@else if $max-value > map-get($max-width, large) {
+				@content;
+			}
+		}
+		@else {
+			@if $use-mediaqueries {
+				@media only screen and (min-width: $min-value) { @content; }
+			}
+			@else if $min-value <= map-get($min-width, large) {
+				@content;
+			}
+		}
+	}
+	@else if $max-value {
+		@if $use-mediaqueries {
+			@media only screen and (max-width: $max-value) { @content; }
+		}
+		@else if $max-value > map-get($max-width, large) {
+			@content;
+		}
+	}
+}

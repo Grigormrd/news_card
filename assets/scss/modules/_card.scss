@@ -1,0 +1,356 @@
+[data-load-more-item] {
+    display: none;
+}
+
+.card {
+    border: 0;
+    border-radius: 0;
+
+    &__wrapper {
+        display: flex;
+        flex: 0 0 100%;
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+
+    &-primary {
+        background-color: $color-primary !important;
+    }
+
+    &-secondary {
+        background-color: $color-secondary !important;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            color: $color-white;
+        }
+    }
+
+    &-accessible {
+        background-color: $color-green-medium !important;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            color: $color-white;
+        }
+    }
+
+    
+
+    .card-content {
+        hyphens: auto;
+        word-break: normal;
+    }
+
+    .card-img {
+        border-radius: 0 !important;
+    }
+
+    &-news {
+        height: 100%;
+        border: 0;
+        border-radius: 0;
+
+        .header-wrapper {
+            position: absolute;
+            left: 18px;
+            top: 20px;
+
+            .round-number {
+                height: 44px;
+                width: 44px;
+                min-width: 44px;
+                font-size: 24px;
+            }
+        }
+
+        .card-content {
+            h5 {
+                @include bp(medium, larger) {
+                    font-size: 1.15rem;
+                    line-height: 1.4rem;
+                }
+            }
+        }
+
+        .card-link {
+            flex-direction: column;
+
+            @include bp(0, medium) {
+                a {
+                    margin-top: 20px;
+                    flex-basis: auto !important;
+                }
+            }
+
+            @include bp(medium) {
+                display: flex;
+                flex-direction: row;
+                margin-top: auto;
+            }
+        }
+
+        .card-img {
+            border-radius: 0;
+            position: relative;
+
+            &.card-img-medium {
+                height: 180px;
+                overflow: hidden;
+            }
+
+            &.image-border {
+                &:before {
+                    position: absolute;
+                    content: '';
+                    height: 4px;
+                    width: 100%;
+                    background-color: $color-green-medium;
+                    bottom: 0;
+                    z-index: 1;
+                }
+            }
+
+            img {
+                object-fit: cover;
+                height: 180px;
+                width: 100%;
+
+                @include bp(smaller) {
+                    height: 210px;
+                }
+
+                @include bp(small) {
+                    height: 360px;
+                }
+            }
+        }
+        .card-ratio {
+            img {
+                object-fit: cover;
+                height: auto;
+                max-height: 180px;
+                width: 100%;
+
+                @include bp(smaller) {
+                    height: auto;
+                    max-height: 210px;
+                }
+            }
+        }
+
+        &--services {
+            flex-direction: row-reverse !important;
+
+            @include bp(larger) {
+                flex-direction: row !important;
+            }
+
+            @include bp(0, small-between) {
+                flex-direction: column-reverse !important;
+            }
+
+            .card-img {
+                max-width: 90px;
+                height: 100% !important;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include bp(0, small-between) {
+                    margin-top: 1.25rem;
+                    height: auto !important;
+                }
+
+                @include bp(larger) {
+                    width: 180px;
+                    max-width: 180px;
+                }
+
+                img {
+                    height: 70px !important;
+                    width: 70px !important;
+                    object-fit: contain !important;
+
+                    @include bp(0, small-between) {
+                        height: 50px !important;
+                        width: 50px !important;
+                    }
+
+                    @include bp(larger) {
+                        height: 90px !important;
+                        width: 90px !important;
+                    }
+                }
+            }
+
+            .card-content {
+                h3 {
+                    @include bp(0, small) {
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+
+        .card-img-small {
+            img {
+                height: 140px;
+            }
+        }
+
+        .card-img-medium {
+            img {
+                height: 215px;
+            }
+        }
+
+        .card-img-icon {
+            height: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.25rem;
+
+            i {
+                font-size: 88px;
+                color: $color-white;
+            }
+
+            img {
+                height: 70px;
+                width: auto;
+                object-fit: contain;
+            }
+
+            .info-button {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                padding: 15px;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 5;
+
+                i {
+                    color: $color-white;
+                    opacity: 0.4;
+                    font-size: 22px;
+                    display: flex;
+                    align-self: flex-end;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2rem;
+
+            &.border-hdi-primary {
+                border-width: 4px;
+                border-top: 0;
+
+                @include bp(larger) {
+                    border-top: 4px solid $color-primary;
+                    border-right: 0;
+                }
+            }
+            .card-datetime {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                margin-bottom: 0.5rem;
+            }
+
+            .date, .time {
+                @include font-regular;
+                color: $color-grey;
+                font-size: 16px;
+                line-height: 22px;
+                display: inline;
+            }
+
+            .prehead {
+                @include font-bold;
+                color: $color-white;
+                background-color: $hdi-green;
+                padding: 6px 12px;
+                font-size: 1rem;
+                line-height: 18px;
+                display: inline-block;
+            }
+
+            .new {
+                display: inline-flex;
+                align-items: center;
+
+                &:before {
+                    content: 'NEU';
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 16px;
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                    line-height: 1rem;
+                    padding: 7px 16px;
+                    @include font-bold;
+                    margin-right: 6px;
+                    color: $color-white;
+                    background-color: $color-cyan;
+                }
+            }
+
+            
+            h2 {
+                color: $color-black;
+                font-size: 22px;
+                line-height: 28px;
+
+                @include bp(medium) {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                }
+            }
+
+            h4 {
+                .new {
+                    &:before {
+                        position: relative;
+                        margin-left: -6px;
+                        top: -2px;
+                    }
+                }
+            }
+            p {
+                color: $color-black;
+                @include font-regular;
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }
+
+            a:not(.btn) {
+                color: $color-grey-dark-60;
+            }
+        }
+    } 
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W1 PA2_2992022</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/style/bundle.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="assets/style/styles.css" media="screen" />
+</head>
+
+<body>
+    <h1>Probearbeit News Card</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <p><strong>Aufgabe: </strong>
+                    <ul>
+                        <li>Eine News-Sektion welche aus einer Textbasierten Datenbank befüllt wird (news.json).</li>
+                        <li>Logik wahlweise in Vanilla JS oder JQuery (Version beliebig)</li>
+                        <li>Der Card-Body sollte laut Design ein padding von 20px haben</li>
+                        <li>"Top" Badge wie in den ersten beiden Cards in dem preview-Image (Klassen vorhanden)</li>
+                        <li>Die unterschiedlichen Button-Designs können ignoriert werden</li>
+                    </ul>
+                </p>
+                <p><strong>Nice to have: </strong>
+                    <ul>
+                        <li>Die Top Badge sollte ebenfalls über die news.json ein- bzw ausgeblendet werden</li>
+                        <li>Copy-Texte nach 150 Zeichen abschneiden.</li>
+                        <li>News nach Datum ausgeben (neuste Datum zuerst)</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="col-6">
+                <img class="img-fluid" src="assets/images/preview1.jpg">
+            </div>
+        </div>
+    </div>
+
+    <section class="pb-5 pt-3 pt-lg-5 bg-grey-light-60" id="old-news">
+        <div class="container">
+            <div class="row justify-content-center" id="news-old">
+            </div>
+        </div>
+    </section>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>

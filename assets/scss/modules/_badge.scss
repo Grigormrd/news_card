@@ -1,0 +1,30 @@
+.badge {
+    border-radius: 0;
+    @include font-bold;
+    font-size: 0.75rem;
+    padding: 0.45em 0.6em;
+    align-self: flex-start;
+
+    @include bp(smaller) {
+        font-size: 1rem;
+    }
+
+    &-primary {
+        background-color: $color-primary;
+    }
+
+    &-secondary {
+        background-color: $color-secondary;
+    }
+
+    &-cyan {
+        background-color: $color-cyan;
+        color: $color-white;
+    }
+
+    &.top {
+        border-radius: 1; //should be rem
+        padding: auto 1rem;
+        text-transform: uppercase;
+    }
+}

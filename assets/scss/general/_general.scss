@@ -1,0 +1,15 @@
+/*
+general
+*/
+
+body {
+    text-rendering: optimizeLegibility;
+
+    section:first-of-type {
+        margin-top: 47px;
+
+        @include bp(burger) {
+            margin-top: 87px;
+        }
+    }
+}

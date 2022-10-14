@@ -1,0 +1,32 @@
+/*
+Fonts
+ */
+@font-face {
+  font-family: 'hdi-regular';
+  src: url('../fonts/HDI1450-Regular.eot');
+  src: url('../fonts/HDI1450-Regular.woff2') format('woff2'), url('../fonts/HDI1450-Regular.woff') format('woff'),
+    url('../fonts/HDI1450-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'hdi-medium';
+  src: url('../fonts/HDI1450-Medium.eot');
+  src: url('../fonts/HDI1450-Medium.woff2') format('woff2'), url('../fonts/HDI1450-Medium.woff') format('woff'),
+    url('../fonts/HDI1450-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'hdi-bold';
+  src: url('../fonts/HDI1450-Bold.eot');
+  src: url('../fonts/HDI1450-Bold.woff2') format('woff2'), url('../fonts/HDI1450-Bold.woff') format('woff'),
+    url('../fonts/HDI1450-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

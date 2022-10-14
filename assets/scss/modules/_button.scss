@@ -1,0 +1,306 @@
+.btn {
+    @include font-bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, $color-grey-light-30 50%, $color-grey-light-60 0);
+    background-size: 100% 200%;
+    border: 0;
+    border-radius: 0;
+    color: $color-white;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    overflow: hidden;
+    padding: 10px 24px;
+    transition: all 0.3s;
+    white-space: nowrap;
+
+    @include bp(large) {
+        align-self: flex-start;
+        font-size: 1.125rem;
+        padding: 15px 30px;
+    }
+
+    &:disabled {
+        color: $color-grey;
+        box-shadow: inset 0 0 0 2px $color-grey;
+        background: transparent;
+        cursor: not-allowed;
+        opacity: 1;
+    }
+    @media (hover: hover) and (pointer: fine) {
+        &:hover:not(:disabled),
+        &:active:not(:disabled),
+        &.active:not(:disabled),
+        &:active:focus:not(:disabled) {
+            outline: none;
+            box-shadow: none !important;
+            text-decoration: none;
+            background-position: 0 100%;
+            color: $color-white;
+            background-color: $color-primary;
+            border-color: $color-primary;
+        }
+
+        &:focus:not(:disabled) {
+            outline: none;
+            box-shadow: none !important;
+            text-decoration: none;
+        }
+    }
+
+    &-primary {
+        background-image: linear-gradient(180deg, $color-primary 50%, $color-green-light 0);
+
+        &:disabled {
+            background: $color-grey-light-60;
+            box-shadow: none;
+        }
+    }
+
+    &-accessible {
+        background-color: $color-green-medium !important;
+        background-image: none;
+        color: $color-white;
+
+        &:disabled {
+            background: $color-grey-light-60;
+            box-shadow: none;
+        }
+    }
+
+    &-white {
+        background-image: none;
+        background-color: $color-white;
+        color: $color-black;
+
+        &:disabled {
+            background: $color-black;
+            box-shadow: none;
+        }
+
+        &:hover:not(:disabled),
+        &:active:not(:disabled),
+        &.active:not(:disabled),
+        &:active:focus:not(:disabled) {
+            box-shadow: inset 0 0 0 2px $color-white !important;
+            background-color: $color-white;
+            border-color: transparent;
+            color: $color-black;
+            background-image: none;
+        }
+    }
+
+    &-secondary {
+        box-shadow: inset 0 0 0 2px $color-green-medium;
+        background-image: linear-gradient(180deg, transparent 50%, $color-green-medium 0);
+        color: $color-black;
+
+        &.dropdown-toggle {
+            border-bottom: 0 !important;
+        }
+
+        // @override Bootstrap standart bg color on mobile hover
+        &:hover {
+            background-color: inherit;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:focus:not(:disabled),
+            &:active:focus:not(:disabled) {
+                color: $color-black;
+                background-image: linear-gradient(180deg, transparent 50%, $color-green-medium 0);
+                box-shadow: inset 0 0 0 2px $color-green-medium !important;
+                background-color: transparent !important;
+            }
+
+            &:hover:not(:disabled),
+            &:active:not(:disabled),
+            &.active:not(:disabled) {
+                color: $color-white !important;
+                box-shadow: inset 0 0 0 2px $color-green-light !important;
+                background-image: linear-gradient(180deg, transparent 50%, $color-green-light 0);
+                background-color: transparent !important;
+                border: 0;
+
+                &.icon-svg-long-arrow-right {
+                    &:before,
+                    &:after {
+                        background-image: url("data:image/svg+xml,%0A%3Csvg width='34px' height='15px' viewBox='0 0 34 15' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpolygon id='path-zygs_kfp5q-1' points='26.742 0 32.548 5.657 34 7.071 26.742 14.142 25.291 12.728 30.018 8.121 0 8.121 0 6.121 30.121 6.121 25.291 1.414'%3E%3C/polygon%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Group'%3E%3Cmask id='mask-zygs_kfp5q-2' fill='white'%3E%3Cuse xlink:href='%23path-zygs_kfp5q-1'%3E%3C/use%3E%3C/mask%3E%3Cuse id='Pfad_9056' fill='%23FFFFFF' xlink:href='%23path-zygs_kfp5q-1'%3E%3C/use%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                    }
+                }
+
+                &.icon-svg-long-arrow-left {
+                    &:before,
+                    &:after {
+                        background-image: url("data:image/svg+xml,%0A%3Csvg width='34px' height='15px' viewBox='0 0 34 15' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpolygon id='path-zygs_kfp5q-1' points='26.742 0 32.548 5.657 34 7.071 26.742 14.142 25.291 12.728 30.018 8.121 0 8.121 0 6.121 30.121 6.121 25.291 1.414'%3E%3C/polygon%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Group'%3E%3Cmask id='mask-zygs_kfp5q-2' fill='white'%3E%3Cuse xlink:href='%23path-zygs_kfp5q-1'%3E%3C/use%3E%3C/mask%3E%3Cuse id='Pfad_9056' fill='%23FFFFFF' xlink:href='%23path-zygs_kfp5q-1'%3E%3C/use%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                        transform: rotate(180deg);
+                    }
+                }
+
+                &.icon-svg-plus {
+                    &:before,
+                    &:after {
+                        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='20px' height='20px' viewBox='0 0 20 20' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EGroup 14%3C/title%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Unterseite-&gt;-Produkte-&gt;-Firmenversicherung' transform='translate(-883.000000, -1569.000000)' fill='%23FFFFFF'%3E%3Cg id='Group-4' transform='translate(180.000000, 1082.000000)'%3E%3Cg id='Group-15-Copy-2' transform='translate(685.000000, 469.000000)'%3E%3Cg id='Group-14' transform='translate(18.000000, 18.000000)'%3E%3Crect id='Combined-Shape' x='0' y='9' width='20' height='2'%3E%3C/rect%3E%3Crect id='Combined-Shape' transform='translate(10.000000, 10.000000) rotate(-90.000000) translate(-10.000000, -10.000000) ' x='0' y='9' width='20' height='2'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                    }
+                }
+
+                &.icon-svg-minus {
+                    &:before,
+                    &:after {
+                        background-image: url("data:image/svg+xml,%3Csvg width='20px' height='2px' viewBox='0 0 20 2' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3ERectangle%3C/title%3E%3Cdefs%3E%3Crect id='path-1' x='0.783637474' y='0' width='1800' height='5096'%3E%3C/rect%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Unterseite-&gt;-Produkte-&gt;-Firmenversicherung-(Kachel-geöffnet)' transform='translate(-402.000000, -1579.000000)'%3E%3Cg id='Combined-Shape-Copy-6' transform='translate(0.000000, 928.000000)'%3E%3Cmask id='mask-2' fill='white'%3E%3Cuse xlink:href='%23path-1'%3E%3C/use%3E%3C/mask%3E%3Cg id='Mask'%3E%3C/g%3E%3Crect id='Rectangle' fill='%23FFFFFF' mask='url(%23mask-2)' x='1' y='0' width='1800' height='4145'%3E%3C/rect%3E%3C/g%3E%3Cg id='Group-15' transform='translate(180.000000, 1085.000000)'%3E%3C/g%3E%3Cg id='Group-7' transform='translate(384.000000, 1536.000000)'%3E%3C/g%3E%3Crect id='Rectangle-Copy-6' stroke='%23FFFFFF' stroke-width='4' fill='%23FFFFFF' x='182' y='1104' width='461' height='544'%3E%3C/rect%3E%3Ctext id='Lorem-ipsum-dolor-si' font-family='HDI-GerlingSansCond-Light, HDI-Gerling Sans' font-size='20' font-weight='normal' line-spacing='32' letter-spacing='0.125' fill='%23FFFFFF'%3E%3Ctspan x='216' y='1435'%3ELorem ipsum dolor sit amet, consectetuer adipiscing %3C/tspan%3E%3Ctspan x='216' y='1467'%3Eelit. Aenean commodo ligula eget dolor. Aenean %3C/tspan%3E%3Ctspan x='216' y='1499'%3Emassa. Cum sociis natoque penatibus.%3C/tspan%3E%3C/text%3E%3Crect id='Rectangle' fill='%23FFFFFF' x='384' y='1552' width='56' height='56'%3E%3C/rect%3E%3Crect id='Combined-Shape' fill='%23FFFFFF' x='402' y='1579' width='20' height='2'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                    }
+                }
+
+                &.icon-svg-read-book {
+                    &:before,
+                    &:after {
+                        background-image: url("data:image/svg+xml,%3Csvg id='auto_stories_white_24dp' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg id='Gruppe_10280' data-name='Gruppe 10280'%3E%3Crect id='Rechteck_59' data-name='Rechteck 59' width='24' height='24' fill='none'/%3E%3C/g%3E%3Cg id='Gruppe_10281' data-name='Gruppe 10281'%3E%3Cpath id='Pfad_9360' data-name='Pfad 9360' d='M22.47,5.2A10.571,10.571,0,0,0,21,4.59V16.62A10.288,10.288,0,0,0,17.5,16,10.6,10.6,0,0,0,12,17.58V5.48A10.928,10.928,0,0,0,1.53,5.2.973.973,0,0,0,1,6.08V18.16a.988.988,0,0,0,1,.99,1.065,1.065,0,0,0,.48-.12A8.694,8.694,0,0,1,6.5,18,9.044,9.044,0,0,1,12,20a9.044,9.044,0,0,1,5.5-2,8.582,8.582,0,0,1,4.02,1.04,1.065,1.065,0,0,0,.48.12.994.994,0,0,0,1-.99V6.08A.973.973,0,0,0,22.47,5.2ZM10,16.62a10.189,10.189,0,0,0-7,0V6.71a8.924,8.924,0,0,1,7,.01ZM19,.5l-5,5V15l5-4.5Z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+                    }
+                }
+
+                &.icon-svg-lock {
+                    &:before,
+                    &:after {
+                        background-image: url("data:image/svg+xml,%3Csvg id='Icons_Lock' data-name='Icons/Lock' xmlns='http://www.w3.org/2000/svg' width='16' height='20' viewBox='0 0 16 20'%3E%3Cpath id='Fill_1' data-name='Fill 1' d='M14,20H2a2,2,0,0,1-2-2V9A2,2,0,0,1,2,7H3V5A5,5,0,1,1,13,5V7h1a2,2,0,0,1,2,2v9A2,2,0,0,1,14,20ZM2,9v9H14V9H2ZM8,2A3,3,0,0,0,5,5V7h6V5A3,3,0,0,0,8,2Z' transform='translate(0 0)' fill='%23fff'/%3E%3C/svg%3E%0A");
+                    }
+                }
+            }
+        }
+    }
+
+    &-tertiary {
+        box-shadow: inset 0 0 0 2px $color-black;
+        background-image: linear-gradient(180deg, $color-white 50%, $color-black 0);
+        color: $color-black !important;
+
+        &:focus:not(:disabled) {
+            color: $color-black;
+            box-shadow: inset 0 0 0 2px $color-black !important;
+        }
+
+        &:hover:not(:disabled),
+        &:active:not(:disabled),
+        &.active:not(:disabled),
+        &:active:focus:not(:disabled) {
+            box-shadow: inset 0 0 0 2px $color-black !important;
+            background-color: transparent;
+            border-color: transparent;
+            color: $color-white !important;
+
+            &.icon-svg-read-book {
+                &:before,
+                &:after {
+                    background-image: url("data:image/svg+xml,%3Csvg id='auto_stories_white_24dp' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg id='Gruppe_10280' data-name='Gruppe 10280'%3E%3Crect id='Rechteck_59' data-name='Rechteck 59' width='24' height='24' fill='none'/%3E%3C/g%3E%3Cg id='Gruppe_10281' data-name='Gruppe 10281'%3E%3Cpath id='Pfad_9360' data-name='Pfad 9360' d='M22.47,5.2A10.571,10.571,0,0,0,21,4.59V16.62A10.288,10.288,0,0,0,17.5,16,10.6,10.6,0,0,0,12,17.58V5.48A10.928,10.928,0,0,0,1.53,5.2.973.973,0,0,0,1,6.08V18.16a.988.988,0,0,0,1,.99,1.065,1.065,0,0,0,.48-.12A8.694,8.694,0,0,1,6.5,18,9.044,9.044,0,0,1,12,20a9.044,9.044,0,0,1,5.5-2,8.582,8.582,0,0,1,4.02,1.04,1.065,1.065,0,0,0,.48.12.994.994,0,0,0,1-.99V6.08A.973.973,0,0,0,22.47,5.2ZM10,16.62a10.189,10.189,0,0,0-7,0V6.71a8.924,8.924,0,0,1,7,.01ZM19,.5l-5,5V15l5-4.5Z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+                }
+            }
+
+            &.icon-svg-long-arrow-right {
+                &:before,
+                &:after {
+                    background-image: url("data:image/svg+xml,%0A%3Csvg width='34px' height='15px' viewBox='0 0 34 15' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpolygon id='path-zygs_kfp5q-1' points='26.742 0 32.548 5.657 34 7.071 26.742 14.142 25.291 12.728 30.018 8.121 0 8.121 0 6.121 30.121 6.121 25.291 1.414'%3E%3C/polygon%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Group'%3E%3Cmask id='mask-zygs_kfp5q-2' fill='white'%3E%3Cuse xlink:href='%23path-zygs_kfp5q-1'%3E%3C/use%3E%3C/mask%3E%3Cuse id='Pfad_9056' fill='%23FFFFFF' xlink:href='%23path-zygs_kfp5q-1'%3E%3C/use%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                }
+            }
+
+            &.icon-svg-plus {
+                &:before,
+                &:after {
+                    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='20px' height='20px' viewBox='0 0 20 20' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EGroup 14%3C/title%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Unterseite-&gt;-Produkte-&gt;-Firmenversicherung' transform='translate(-883.000000, -1569.000000)' fill='%23FFFFFF'%3E%3Cg id='Group-4' transform='translate(180.000000, 1082.000000)'%3E%3Cg id='Group-15-Copy-2' transform='translate(685.000000, 469.000000)'%3E%3Cg id='Group-14' transform='translate(18.000000, 18.000000)'%3E%3Crect id='Combined-Shape' x='0' y='9' width='20' height='2'%3E%3C/rect%3E%3Crect id='Combined-Shape' transform='translate(10.000000, 10.000000) rotate(-90.000000) translate(-10.000000, -10.000000) ' x='0' y='9' width='20' height='2'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                }
+            }
+
+            &.icon-svg-minus {
+                &:before,
+                &:after {
+                    background-image: url("data:image/svg+xml,%3Csvg width='20px' height='2px' viewBox='0 0 20 2' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3ERectangle%3C/title%3E%3Cdefs%3E%3Crect id='path-1' x='0.783637474' y='0' width='1800' height='5096'%3E%3C/rect%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Unterseite-&gt;-Produkte-&gt;-Firmenversicherung-(Kachel-geöffnet)' transform='translate(-402.000000, -1579.000000)'%3E%3Cg id='Combined-Shape-Copy-6' transform='translate(0.000000, 928.000000)'%3E%3Cmask id='mask-2' fill='white'%3E%3Cuse xlink:href='%23path-1'%3E%3C/use%3E%3C/mask%3E%3Cg id='Mask'%3E%3C/g%3E%3Crect id='Rectangle' fill='%23FFFFFF' mask='url(%23mask-2)' x='1' y='0' width='1800' height='4145'%3E%3C/rect%3E%3C/g%3E%3Cg id='Group-15' transform='translate(180.000000, 1085.000000)'%3E%3C/g%3E%3Cg id='Group-7' transform='translate(384.000000, 1536.000000)'%3E%3C/g%3E%3Crect id='Rectangle-Copy-6' stroke='%23FFFFFF' stroke-width='4' fill='%23FFFFFF' x='182' y='1104' width='461' height='544'%3E%3C/rect%3E%3Ctext id='Lorem-ipsum-dolor-si' font-family='HDI-GerlingSansCond-Light, HDI-Gerling Sans' font-size='20' font-weight='normal' line-spacing='32' letter-spacing='0.125' fill='%23FFFFFF'%3E%3Ctspan x='216' y='1435'%3ELorem ipsum dolor sit amet, consectetuer adipiscing %3C/tspan%3E%3Ctspan x='216' y='1467'%3Eelit. Aenean commodo ligula eget dolor. Aenean %3C/tspan%3E%3Ctspan x='216' y='1499'%3Emassa. Cum sociis natoque penatibus.%3C/tspan%3E%3C/text%3E%3Crect id='Rectangle' fill='%23FFFFFF' x='384' y='1552' width='56' height='56'%3E%3C/rect%3E%3Crect id='Combined-Shape' fill='%23FFFFFF' x='402' y='1579' width='20' height='2'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                }
+            }
+
+            &.icon-svg-lock {
+                &:before,
+                &:after {
+                    background-image: url("data:image/svg+xml,%3Csvg id='Icons_Lock' data-name='Icons/Lock' xmlns='http://www.w3.org/2000/svg' width='16' height='20' viewBox='0 0 16 20'%3E%3Cpath id='Fill_1' data-name='Fill 1' d='M14,20H2a2,2,0,0,1-2-2V9A2,2,0,0,1,2,7H3V5A5,5,0,1,1,13,5V7h1a2,2,0,0,1,2,2v9A2,2,0,0,1,14,20ZM2,9v9H14V9H2ZM8,2A3,3,0,0,0,5,5V7h6V5A3,3,0,0,0,8,2Z' transform='translate(0 0)' fill='%23fff'/%3E%3C/svg%3E%0A");
+                }
+            }
+        }
+
+        &.btn-filter {
+            box-shadow: none;
+            background-image: linear-gradient(180deg, $color-grey-dark-30 50%, $color-primary 0);
+            color: $color-white;
+
+            &:hover:not(:disabled),
+            &:focus:not(:disabled),
+            &:active:not(:disabled),
+            &.active:not(:disabled),
+            &:active:focus:not(:disabled) {
+                box-shadow: inset 0 0 0 2px $color-primary !important;
+                color: $color-black;
+            }
+
+            &:disabled {
+                color: $color-grey;
+                background: $color-grey-light-60;
+            }
+        }
+    }
+
+    &-filter {
+        border-radius: 50px;
+        width: auto;
+    }
+
+    &-circle {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+    }
+
+    &-wide {
+        display: block;
+        width: 100%;
+
+        @include bp(small) {
+            display: inline-block;
+            width: auto;
+            padding: 10px 40px;
+        }
+
+        @include bp(medium) {
+            padding: 11px 50px;
+        }
+
+        @include bp(large) {
+            padding: 12px 60px;
+        }
+    }
+
+    &-video {
+        width: 93px;
+        height: 93px;
+        position: absolute;
+        padding: 0;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0;
+
+        &::before {
+            height: 28px;
+            width: 22px;
+            margin-left: 10px;
+        }
+    }
+
+    &.icon-after,
+    &.icon-svg-after {
+        &:after {
+            margin-top: 4px;
+        }
+    }
+}

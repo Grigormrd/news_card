@@ -1,0 +1,411 @@
+/*
+colors
+*/
+
+$hdi-green: #006729;
+$hdi-red: #e60018;
+$hdi-red-10: #fce5e7;
+$color-green-medium: #65a518;
+$color-primary: $color-green-medium;
+$color-primary-60: #65A519;
+$color-primary-40: #c1dba3;
+$color-primary-20: #e0edd1;
+$color-primary-10: #eff6e7;
+$color-secondary: $hdi-green;
+$color-green-light: #558817;
+
+$color-blue: #003960;
+$color-blue-light: #00a3a8;
+$color-blue-light-10: #e5f7f7;
+$color-cyan: $color-blue-light;
+$color-cyan-dark: #00191a;
+$color-orange-light: #ff9900;
+$color-aqua: #03b1b7;
+
+$color-orange: #f59c00;
+$color-orange-light-10: #fff4e5;
+$color-orange-dark: #4d2e00;
+$color-darkred: #8d1429;
+$color-ocre: #db6301;
+
+$color-grey-dark-60: #282828;
+$color-grey-dark-30: #3b3c3c;
+$color-grey: #6c6f70;
+$color-grey-medium: #9d9d9c;
+$color-grey-light: #c6c7c8;
+$color-grey-light-60: #eeeeef;
+$color-grey-light-30: #f9f9fa;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-btn-font-primary: #003c18;
+$color-btn-bg-primary-hover: $color-green-light;
+
+$color-grey-gradient: linear-gradient(225deg, #b3b3b3 0%, #747474 100%);
+
+$color-magenta: magenta;
+
+.color {
+    &-white {
+        color: $color-white !important;
+    }
+
+    &-hdi-green {
+        color: $hdi-green !important;
+    }
+
+    &-hdi-red {
+        color: $hdi-red !important;
+    }
+
+    &-hdi-red-10 {
+        color: $hdi-red-10 !important;
+    }
+
+    &-hdi-primary {
+        color: $color-primary !important;
+    }
+    &-hdi-primary-60 {
+        color: $color-primary-60 !important;
+    }
+
+    &-hdi-primary-40 {
+        color: $color-primary-40 !important;
+    }
+
+    &-hdi-primary-20 {
+        color: $color-primary-20 !important;
+    }
+
+    &-hdi-primary-10 {
+        color: $color-primary-10 !important;
+    }
+
+    &-green-light {
+        color: $color-green-light !important;
+    }
+
+    &-green-medium {
+        color: $color-green-medium !important;
+    }
+
+    &-blue {
+        color: $color-blue !important;
+    }
+
+    &-blue-light {
+        color: $color-blue-light !important;
+    }
+
+    &-blue-light-10 {
+        color: $color-blue-light-10 !important;
+    }
+
+    &-cyan {
+        color: $color-cyan !important;
+    }
+
+    &-cyan-dark {
+        color: $color-cyan-dark !important;
+    }
+
+    &-orange-light {
+        color: $color-orange-light !important;
+    }
+
+    &-magenta {
+        color: $color-magenta !important;
+    }
+}
+
+.bg {
+    &-hdi-green {
+        background-color: $hdi-green !important;
+    }
+
+    &-hdi-red {
+        background-color: $hdi-red !important;
+    }
+
+    &-hdi-red-10 {
+        background-color: $hdi-red-10 !important;
+    }
+
+    &-hdi-primary {
+        background-color: $color-primary !important;
+    }
+
+    &-hdi-primary-60 {
+        background-color: $color-primary-60 !important;
+    }
+
+    &-hdi-primary-40 {
+        background-color: $color-primary-40 !important;
+    }
+
+    &-hdi-primary-20 {
+        background-color: $color-primary-20 !important;
+    }
+
+    &-hdi-primary-10 {
+        background-color: $color-primary-10 !important;
+    }
+
+    &-green-light {
+        background-color: $color-green-light !important;
+    }
+
+    &-green-medium {
+        background-color: $color-green-medium !important;
+    }
+
+    &-blue {
+        background-color: $color-blue !important;
+    }
+
+    &-blue-light {
+        background-color: $color-blue-light !important;
+    }
+
+    &-blue-light-10 {
+        background-color: $color-blue-light-10 !important;
+    }
+
+    &-cyan {
+        background-color: $color-cyan !important;
+    }
+
+    &-aqua {
+        background-color: $color-aqua !important;
+    }
+
+    &-cyan-dark {
+        background-color: $color-cyan-dark !important;
+    }
+
+    &-orange-light {
+        background-color: $color-orange-light !important;
+    }
+
+    &-orange-light-10 {
+        background-color: $color-orange-light-10 !important;
+    }
+
+    &-orange-dark {
+        background-color: $color-orange-dark !important;
+    }
+
+    &-darkred {
+        background-color: $color-darkred !important;
+    }
+
+    &-ocre {
+        background-color: $color-ocre !important;
+    }
+
+    &-grey-dark-60 {
+        background-color: $color-grey-dark-60 !important;
+    }
+
+    &-grey-dark-30 {
+        background-color: $color-grey-dark-30 !important;
+    }
+
+    &-grey {
+        background-color: $color-grey !important;
+    }
+
+    &-grey-medium {
+        background-color: $color-grey-medium !important;
+    }
+
+    &-grey-light {
+        background-color: $color-grey-light !important;
+    }
+
+    &-grey-light-60 {
+        background-color: $color-grey-light-60 !important;
+    }
+
+    &-grey-light-30 {
+        background-color: $color-grey-light-30 !important;
+    }
+
+    &-black {
+        background-color: $color-black !important;
+    }
+
+    &-white {
+        background-color: $color-white !important;
+    }
+
+    &-btn-bg-primary-hover {
+        background-color: $color-btn-bg-primary-hover !important;
+    }
+
+    &-magenta {
+        background-color: $color-magenta !important;
+    }
+    &-transparent {
+        background-color: transparent !important;
+    }
+    &-gradient-grey {
+        background: $color-grey-gradient !important;
+    }
+}
+
+.border {
+    &-hdi-green {
+        border: 3px solid;
+        border-color: $hdi-green;
+    }
+
+    &-hdi-red {
+        border: 3px solid;
+        border-color: $hdi-red;
+    }
+
+    &-hdi-red-10 {
+        border: 3px solid;
+        border-color: $hdi-red-10;
+    }
+
+    &-hdi-primary {
+        border: 3px solid;
+        border-color: $color-primary !important;
+    }
+
+    &-hdi-primary-60 {
+        border: 3px solid;
+        border-color: $color-primary-60 !important;
+    }
+
+    &-hdi-primary-40 {
+        border: 3px solid;
+        border-color: $color-primary-40 !important;
+    }
+
+    &-hdi-primary-20 {
+        border: 3px solid;
+        border-color: $color-primary-20 !important;
+    }
+
+    &-hdi-primary-10 {
+        border: 3px solid;
+        border-color: $color-primary-10 !important;
+    }
+
+    &-green-light {
+        border: 3px solid;
+        border-color: $color-green-light;
+    }
+
+    &-green-medium {
+        border: 3px solid;
+        border-color: $color-green-medium;
+    }
+
+    &-blue {
+        border: 3px solid;
+        border-color: $color-blue;
+    }
+
+    &-blue-light {
+        border: 3px solid;
+        border-color: $color-blue-light;
+    }
+
+    &-blue-light-10 {
+        border: 3px solid;
+        border-color: $color-blue-light-10;
+    }
+
+    &-cyan {
+        border: 3px solid;
+        border-color: $color-cyan;
+    }
+
+    &-cyan-dark {
+        border: 3px solid;
+        border-color: $color-cyan-dark;
+    }
+
+    &-orange-light {
+        border: 3px solid;
+        border-color: $color-orange-light;
+    }
+
+    &-orange-light-10 {
+        border: 3px solid;
+        border-color: $color-orange-light-10;
+    }
+
+    &-orange-dark {
+        border: 3px solid;
+        border-color: $color-orange-dark;
+    }
+
+    &-darkred {
+        border: 3px solid;
+        border-color: $color-darkred;
+    }
+
+    &-ocre {
+        border: 3px solid;
+        border-color: $color-ocre;
+    }
+
+    &-grey-dark-60 {
+        border: 3px solid;
+        border-color: $color-grey-dark-60;
+    }
+
+    &-grey-dark-30 {
+        border: 3px solid;
+        border-color: $color-grey-dark-30;
+    }
+
+    &-grey {
+        border: 3px solid;
+        border-color: $color-grey;
+    }
+
+    &-grey-medium {
+        border: 3px solid;
+        border-color: $color-grey-medium;
+    }
+
+    &-grey-light {
+        border: 3px solid;
+        border-color: $color-grey-light;
+    }
+
+    &-grey-light-60 {
+        border: 3px solid;
+        border-color: $color-grey-light-60;
+    }
+
+    &-grey-light-30 {
+        border: 3px solid;
+        border-color: $color-grey-light-30;
+    }
+
+    &-black {
+        border: 3px solid;
+        border-color: $color-black;
+    }
+
+    &-white {
+        border: 3px solid;
+        border-color: $color-white;
+    }
+
+    &-btn-bg-primary-hover {
+        border: 3px solid;
+        border-color: $color-btn-bg-primary-hover;
+    }
+
+    &-magenta {
+        border: 3px solid;
+        border-color: $color-magenta;
+    }
+}
