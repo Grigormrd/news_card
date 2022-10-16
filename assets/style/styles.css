@@ -289,21 +289,6 @@ colors
 }
 
 /*
-general
-*/
-body {
-  text-rendering: optimizeLegibility;
-}
-body section:first-of-type {
-  margin-top: 47px;
-}
-@media only screen and (min-width: 78.125em) {
-  body section:first-of-type {
-    margin-top: 87px;
-  }
-}
-
-/*
 Fonts
  */
 @font-face {

@@ -32828,15 +32828,6 @@ readers do not read off random characters that represent icons */
   padding-left: 25px;
 }
 
-body section:first-of-type {
-  margin-top: 51px;
-}
-@media only screen and (min-width: 62em) {
-  body section:first-of-type {
-    margin-top: 90px;
-  }
-}
-
 .card-icon {
   padding: 0;
   margin-top: 20px;
